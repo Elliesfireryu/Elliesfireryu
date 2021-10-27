@@ -1,5 +1,5 @@
 - 👋 Hi, I’m Jenelle Hanson! 
-- 👀 I’m interested in Dancing, coding and eating!!
+- 👀 I’m interested in dancing, coding and eating!!
 - 🌱 I’m currently learning Java and Javascript, Python is next!
 - 💞️ I’m looking to collaborate on Coding projects that help shape our world.
 - 📫 How to reach me My discord is Elliefireryu#1964 feel free to add me!
