@@ -133,7 +133,7 @@ function rotateArr(arr, shiftBy){
         var newIndex = i + shiftBy;
         if(newIndex < arr.length) {
             swapR(arr, i, newIndex);
-            console.log(arr);
+            // console.log(arr);
         }
         // if(newIndex >= arr.length-1) {
         //     newIndex - newIndex;
@@ -141,10 +141,12 @@ function rotateArr(arr, shiftBy){
         //     // console.log(arr);
         // }
     }
-    return arr;
+    return arr + " Rotate";
 }
 
-console.log(rotateArr([0,1,2,3], 1));
+console.log(rotateArr([0,1,2,3], 1));// works
+console.log(rotateArr([0,1,2,3], 5));//doesn't work should look the same as above)':
+console.log(rotateArr([0,1,2,3], -1)); //doesn't work with negatives 
 
 // input: arr and the number of indices to shift by.
 // output: arr
@@ -162,12 +164,24 @@ console.log(rotateArr([0,1,2,3], 1));
 
 
 function filterRange(arr, min, max){
+    var newI = 0;
     for(var i = 0; i < arr.length; i++){
-        if((arr[i] >= min) || (arr[i] <= max)){
-            
+        if(arr[i] >= min && arr[i] <= max){
+            arr[newI] = arr[i];
+            newI++;
+            console.log(arr);
         }
     }
+    arr.length = newI;
+    return arr;
 }
+
+// input:arr, min max value
+// output:arr
+// goal start and end the array at the min and max respectively
+console.log(filterRange([0,1,2,3], 1, 2));
+
+
 
 function concat(arr, arr1){
     var arrEnd = (arr.length) + (arr1.length);
