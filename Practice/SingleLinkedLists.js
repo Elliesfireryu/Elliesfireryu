@@ -84,6 +84,27 @@ class SLL {//this will connect the nodes together!!! the chain on the string of 
         console.log(this.head.val);
         return this.head.val;//return new head value
     }
+
+    /************************************************************ */
+
+    contains(val){
+        let runner = this.head;
+        if (this.head === null) {
+            console.log(false);
+            return false;
+        } else {
+            while(runner != null){
+                if(runner.val === val) {
+                    console.log(true);
+                    return true;
+                } else {
+                runner = runner.next;
+                }
+            }                
+            console.log(false);
+            return false;
+        }
+    }
 }
 
 let list = new SLL();
@@ -94,4 +115,7 @@ list.addFront("Carlos");
 list.displaySLL();
 list.removeFront();
 list.removeFrontRV();
+list.contains("Aisha");
+list.contains("Aih");
+
 
