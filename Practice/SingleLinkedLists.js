@@ -105,6 +105,23 @@ class SLL {//this will connect the nodes together!!! the chain on the string of 
             return false;
         }
     }
+
+    /********************************************************** */
+
+    length(){
+        if (this.head === null){
+            console.log("List is empty");
+            return 0;
+        } else {
+            let current = this.head;
+            let total = 1;//by the head not being empty you know current counts as one
+            while(current.next){
+                current = current.next;
+                total++;
+            }
+            console.log(total);
+        }
+    }
 }
 
 let list = new SLL();
@@ -117,5 +134,8 @@ list.removeFront();
 list.removeFrontRV();
 list.contains("Aisha");
 list.contains("Aih");
-
+list.length();
+list.addFront("Carlos");
+list.addEnd("Ellie");
+list.length();
 
