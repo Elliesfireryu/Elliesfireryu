@@ -122,8 +122,67 @@ class SLL {//this will connect the nodes together!!! the chain on the string of 
             console.log(total);
         }
     }
-}
+    //Create method max() to return list’s largest val.
+    max(){
+        let max = this.head.val;
+        let runner = this.head;
+        if (this.head === null) {
+            console.log("This list is empty");
+            return;
+        } else {
+            while(runner != null){
+                if(max < runner.val){
+                    max = runner.val;
+                }
+                runner = runner.next;
+            }                
+            console.log("Max: " + max);
+            return max;
+        }
+    }
 
+    //Create method min() to return list’s lowest val.
+    min(){
+        let min = this.head.val;
+        let runner = this.head;
+        if (this.head === null) {
+            console.log("This list is empty");
+            return;
+        } else {
+            while(runner.next){
+                if(min > runner.val){
+                    min = runner.val;
+                } else {
+                    runner = runner.next;
+                }
+            }                
+            console.log("Min: " + min);
+            return min;
+        }
+    }
+
+    //Create method avg() to return list’s average val.
+    avg(){
+        let sum = 0;
+        let avg;
+        let runner = this.head;
+        if (this.head === null) {
+            console.log("This list is empty");
+            return;
+        } else {
+            let count = 0;
+            while(runner != null){
+                sum += runner.val;
+                runner = runner.next;
+                count++;
+            }              
+            avg = sum/count;
+            console.log("Avg: " + avg);
+            return avg;
+        }
+    }
+}
+/*
 let list = new SLL();
 list.addEnd("Ellie");
 list.addEnd("Samael");
@@ -137,5 +196,14 @@ list.contains("Aih");
 list.length();
 list.addFront("Carlos");
 list.addEnd("Ellie");
-list.length();
+list.length();*/
 
+let list2 = new SLL();
+list2.displaySLL();
+list2.addEnd(2);
+list2.addFront(4);
+list2.addEnd(2);
+list2.addFront(4);
+list2.avg();
+list2.min();
+list2.max();
